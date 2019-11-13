@@ -24,6 +24,12 @@ html, body {
 
 }
 
+.versionNumber{
+  text-align:right;
+  position: absolute;
+  right:5em;
+}
+
 
 h1 {
     margin: 0 0 0px 0;
@@ -50,37 +56,14 @@ p {
   font-size: 14px;
 }
 
+.navbar::before, .navbar::after {
+  content: none;
+}
 
-
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #202424;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: large;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #66ccff;
-    color: white;
-  }
-
-
+input[type="text"]
+{
+    font-size:14px;
+}
 
   .folderPaths {
 
@@ -124,6 +107,23 @@ p {
         size:14px;
         
         }
+
+        .filterByDate {
+
+          width: 50px;
+         
+          display: inline-block;
+          border: 1px solid black;
+          border-radius: 4px;
+          box-sizing: border-box;
+          background-color:grey;
+          color: #e1e1e1;
+          size:14px;
+          }
+
+
+
+
     .libraryTitle {
 
       width: 90%;
@@ -373,7 +373,6 @@ p {
 
       border: 1px solid black;
       border-radius: 5px;
-      margin:2em;
       background:#373737;
       padding:0em 0em 2em 0em;
 
@@ -391,6 +390,14 @@ p {
      background:#373737;
 
     
+    }
+
+    .searchContainer{
+
+      border: 1px solid black;
+      border-radius: 5px;
+      background:#373737;
+
     }
 
 
@@ -540,8 +547,28 @@ p {
       border: 2px solid black;
       border-radius: 5px;
       background:#373737;
-      margin:2em;
+      margin:0 1em;
     }
+
+    .tabWrapStat{
+      border: 1px solid black;
+      border-radius: 5px;
+      margin:2em;
+      background:#222222;
+      padding:0em 0em 0em 0em;
+    
+    }
+    
+    .tabContainerStat{
+      background:  #121212;
+    }
+
+    
+    .holder{
+      /* margin:2em; */
+    
+    }
+    
 
 
 
@@ -849,6 +876,22 @@ table.searchResultsTable td {
 
 }
 
+table.pluginStackTable th {
+
+
+  border: 1px solid white;
+  color: black;
+
+}
+
+table.pluginStackTable td {
+
+
+  border: 1px solid white;
+  color: black;
+
+}
+
 .iconContainer {
   background-color: grey;
   display: inline-block;
@@ -921,6 +964,33 @@ table.searchResultsTable td {
 }
 
 
+.pluginTabGrid-container {
+  display: grid;
+  grid-template-columns: auto 80%;
+  width:100%;
+  height:100%;
+}
+
+.pluginTabGrid-itemLeft {
+
+  width:100%;
+  border-right: 1px solid black;
+
+}
+
+
+.pluginTabGrid-itemRight {
+
+  width:100%;
+  padding: 0 0 0 2em
+
+}
+
+
+.pluginCreatorSubItems{
+
+  margin: 0 0 0 2em;
+}
 
 
 
@@ -977,6 +1047,14 @@ table.workerDetailTable td {
 .selectedNav{
 
   color:#bb86fc;
+}
+
+.selectedNav:hover {
+  font-weight: bold;
+}
+
+.unselectedNav:hover{
+  font-weight: bold;
 }
 
 
@@ -1083,6 +1161,11 @@ table.streamsTable tr {
 
 .tabContainer{
   background:#373737;
+}
+
+
+.optionsDiv{
+  margin:0 2em;
 }
 
 
